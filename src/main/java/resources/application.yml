@@ -1,40 +1,26 @@
-# Application settings
+# Spring application settings
 spring:
-  application:
-    name: simple-ecommerce
-  thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-    cache: false
-
-# Server settings
-server:
-  port: 8080
-
-# H2 Database settings
-spring:
-  h2:
-    console:
-      enabled: true
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
     username: sa
     password:
+  h2:
+    console:
+      enabled: true
 
-# JPA settings
-spring:
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
+# Thymeleaf settings
+# These settings are optional and can be adjusted based on your requirements
+thymeleaf:
+  prefix: classpath:/templates/
+  suffix: .html
+  cache: false
 
 # Logging settings
 logging:
   level:
-    org:
-      springframework: DEBUG
-      hibernate: ERROR
+    root: INFO
+
+# Server settings
+server:
+  port: 8080
