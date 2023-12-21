@@ -19,3 +19,4 @@ public class Product {
 
     // Getters and setters
 }
+
