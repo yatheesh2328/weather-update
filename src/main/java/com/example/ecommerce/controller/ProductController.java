@@ -1,28 +1,20 @@
 package com.example.ecommerce.controller;
 
-import com.example.ecommerce.model.Product;
-import com.example.ecommerce.repository.ProductRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.List;
-
 @Controller
-@RequestMapping("/products")
+@RequestMapping("/product")
 public class ProductController {
 
-    private final ProductRepository productRepository;
-
-    public ProductController(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
-
     @GetMapping("/manage")
-    public String manageProducts(Model model) {
-        List<Product> productList = productRepository.findAll();
-        model.addAttribute("productList", productList);
-        return "product/manage";
+    public String showManagePage(Model model) {
+        // Add logic to fetch and pass data to the template if needed
+        return "manage";
     }
+
+    // Add other methods for different endpoints or operations related to products
+
 }
