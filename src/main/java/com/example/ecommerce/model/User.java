@@ -6,16 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Product {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    private String description;
-    private double price;
-    private int quantity; // New field
+    private String username;
+    private String password;
 
     // Getters and setters
 }
