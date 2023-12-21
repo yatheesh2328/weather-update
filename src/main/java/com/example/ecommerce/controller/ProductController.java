@@ -26,4 +26,3 @@ public class ProductController {
         return "product/manage";
     }
 }
-
