@@ -4,6 +4,9 @@
 # once mvn clean install is successful jar file would be generated in the target
 # once Jar is generated run java -jar target/weather-forecast-app-1.0-SNAPSHOT.jar
 
+
+Jenkinsfile 
+
 pipeline {
     agent any
 
