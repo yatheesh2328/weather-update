@@ -44,7 +44,7 @@ pipeline {
             steps {
                 script {
                     // Copy the JAR file to the Tomcat webapps directory
-                    sh "cp target/myhealthapp.jar /path/to/tomcat/webapps/"
+                    sh "cp target/weather-forecast-app-1.0-SNAPSHOT.jar /path/to/tomcat/webapps/"
 
                     // Restart Tomcat
                     sh "/path/to/tomcat/bin/shutdown.sh"
