@@ -64,7 +64,7 @@ pipeline {
         always {
             // Cleanup: Stop the locally running Spring Boot application
             script {
-                sh "pkill -f 'java -jar target/myhealthapp.jar'"
+                sh "pkill -f 'java -jar target/weather-forecast-app-1.0-SNAPSHOT.jar'"
             }
         }
     }
