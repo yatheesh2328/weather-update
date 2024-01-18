@@ -17,7 +17,7 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        sh '/home/slave3/workspace/weatherMBP3_Develop/target/weather-forecast-app-1.0-SNAPSHOT.jar /opt/apache-tomcat-8.5.98/webapps/'
+        sh 'scp /home/slave3/workspace/weatherMBP3_Develop/target/weather-forecast-app-1.0-SNAPSHOT.jar root@172.31.17.229:/opt/apache-tomcat-8.5.98/webapps/'
       }
     }
   }
